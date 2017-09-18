@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     git \
     apt-utils \
     ruby-compass \
-    python3.6 \
+    python \
     python-pip \
     python-dev
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
