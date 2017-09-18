@@ -19,12 +19,15 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     libxft-dev \
     libfreetype6 \
-    libfreetype6-dev
+    libfreetype6-dev \
+    locales
     
 
 
 # Install sass and compass gems
-
+RUN locale-gen en_US.UTF-8
+RUN export LC_ALL="en_US.UTF-8"
+RUN export LANG="en_US.UTF-8"
 RUN gem install sass --no-ri --no-rdoc
 RUN gem install compass --no-ri --no-rdoc
 RUN npm install -g grunt
