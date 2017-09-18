@@ -23,7 +23,8 @@ RUN apt-get update && apt-get install -y \
     libfreetype6 \
     libfreetype6-dev \
     locales
-    
+
+RUN pip install --upgrade pip    
 RUN pip install awscli --upgrade
 
 # Install sass and compass gems
