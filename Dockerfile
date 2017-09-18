@@ -14,7 +14,12 @@ RUN apt-get update && apt-get install -y \
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get update && apt-get install -y \
     nodejs \
-    build-essential
+    build-essential \
+    chrpath \
+    libssl-dev \
+    libxft-dev \
+    libfreetype6 \
+    libfreetype6-dev
     
 
 
