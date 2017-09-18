@@ -34,5 +34,6 @@ RUN npm install -g grunt
 RUN npm install -g grunt-cli 
 RUN npm install -g karma-cli 
 RUN npm install -g compass 
+RUN compass compile
 RUN npm install -g grunt-contrib-compass 
 RUN npm install -g bower
