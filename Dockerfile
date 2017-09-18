@@ -22,4 +22,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN gem install sass --no-ri --no-rdoc
 RUN gem install compass --no-ri --no-rdoc
-RUN npm install -g grunt-cli karma-cli compass grunt-contrib-compass bower
+RUN npm install -g grunt
+RUN npm install -g grunt-cli 
+RUN npm install -g karma-cli 
+RUN npm install -g compass 
+RUN npm install -g grunt-contrib-compass 
+RUN npm install -g bower
