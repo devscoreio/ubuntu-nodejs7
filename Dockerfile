@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:16.10
 
 # Install ruby & ruby-dev
 RUN apt-get update && apt-get install -y \
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     git \
     apt-utils \
     ruby-compass \
-    awscli
+    python3.6
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get update && apt-get install -y \
     nodejs \
@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     locales
     
-
+RUN pip install awscli --upgrade
 
 # Install sass and compass gems
 RUN locale-gen en_US.UTF-8
