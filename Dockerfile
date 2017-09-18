@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y \
     dh-autoreconf \
     nasm \
     git \
-    apt-utils
+    apt-utils \
+    ruby-compass \
+    awscli
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get update && apt-get install -y \
     nodejs \
@@ -20,3 +22,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN gem install sass --no-ri --no-rdoc
 RUN gem install compass --no-ri --no-rdoc
+RUN npm install -g grunt-cli karma-cli compass grunt-contrib-compass bower
